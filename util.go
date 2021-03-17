@@ -42,7 +42,7 @@ func isVuln(r *http.Response) bool {
 	}
 
 	for key, header := range r.Header {
-		if key == "X-Calculatedbetarget" {
+		if key == "X-CalculatedBETarget" {
 			for _, h := range header {
 				if strings.Contains(h, "localhost") {
 					return true
